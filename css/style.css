@@ -1,0 +1,384 @@
+body{
+  background-color: white;
+  font-size: 18px;
+  margin: 0;
+  font-family: "EB Garamond"
+}
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 10px;
+	position: absolute; 
+	top: -30px;   
+	z-index: 1;
+}
+
+.skip a:focus {
+  top: 0px;
+}
+
+
+.logo a{
+  text-decoration: none;
+  color: black;
+
+}
+
+
+nav li {
+  text-align: center;
+  padding: 10px 15px;
+  text-transform: uppercase;
+
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.active{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 22px
+}
+
+.logo{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+
+#navigation li a:hover{
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+#navigation li a:active{
+  font-weight: bold;
+  text-decoration:underline;
+
+}
+
+
+
+.about-image{
+    position: relative;
+}
+
+.commonhead h1{
+    left: 0;
+    text-align:center;
+    top: 30px;
+    width: 100%;
+    font-size: 40px;
+    padding-top: 20px;
+    
+}
+
+.quote{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.quote p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.about-text{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.about-text h1{
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.about-text p{
+  padding-top: 20px;
+ }
+
+footer{
+  padding-top: 30px;
+  text-align: center;
+  font-family: "Garamond";
+  bottom: 0px;
+  background-color: lavender;
+  width: 100%;
+}
+
+/* art css */
+
+.container{
+display: grid;
+grid-gap: 20px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+}
+
+div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.art-text p{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* fun facts css */
+
+ol h1{
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: grey;
+
+}
+
+.funfact p{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* contact form css */
+
+.form{
+  margin: auto;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column
+}
+
+.entry{
+  border: solid black 1px;
+  margin: 10px auto;
+  font-family: "Garamond";
+  text-align: center; 
+  border-radius: .5em;
+  padding-bottom: 55px;
+}
+
+.submit{
+  border-radius: .5em;
+  font-size: 15;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  color: white;
+  background-color: black;
+  text-align: center;
+
+}
+
+.artists{
+  padding: 30px;
+}
+.artists img{
+  padding: 10px;
+  width: 100px;
+  height: 400px;
+}
+
+.artists h1{
+  text-align: center;
+}
+.artists h2{
+  text-align: center;
+}
+.artists p{
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (min-width: 600px){
+
+#navigation  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.artists{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.about-image{
+  background-size: 100%;
+  background-color: black;
+}
+
+.about-image img{
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+@media (min-width: 1020px){
+  .flipcard{
+    display: block;
+    justify-content: center;
+    padding-left: 70px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .inner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipcard h1 {
+    font-size: 30px;
+    padding: 15px;
+  }
+  
+  .flipcard p {
+    text-align: left;
+  }
+  .flipcard:hover .inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipcard:focus .inner {
+    transform: rotateY(180deg);
+      
+  }
+  
+  .front, .back {
+    position: absolute;
+    max-width: 500px;
+    max-height: 400px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    color: black;
+  
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  .front img{
+      width: 250px;
+      height: 250px;
+      object-fit: contain;
+  }
+  
+  .back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+  
+     -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  }
+
+  .gallery img:hover{
+    opacity: 50%;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto; 
+  }
+
+  .logo {
+    text-align: left;
+    padding: 20px;
+  }
+  
+  #navigation  {
+    justify-content: flex-end;
+    align-content: center;
+  }  
+
+  ol{
+    list-style-position: inside;
+    list-style-type: upper-roman
+  }
+
+  ol {
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: orange;
+}
+
+ol h1{
+  color: red;
+}
+
+
+ol p{
+  padding-bottom: 40px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; 
+      /* removes animation? */
+  }}
+}
